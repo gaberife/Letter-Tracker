@@ -2,16 +2,14 @@
 #include <stdlib.h>
 #include <string.h>
 
-/*
-Write a function printArray that takes two arguments: an array of ints and the length of the array. It
-should print out the contents of the array. BUT, just for practice, do not use any [ ] notation inside of
-your function. You can use it to declare the formal parameter if you want (for example, int arr[]),
-but don’t use [ ] for indexing. Instead, use pointer arithmetic to access the elements of the array, one at
-a time.
-*/
 
-void printArray(int arr[],  ){
-
+void printArray(int arr[] , int length) {
+  printf("-----------Problem 1 1----------\n");
+  int* watchV = arr; // points watchV to the front of the array
+  printf("The elements in your Array are: \n");
+  for( int i = 0; i < length; i++ , watchV++){
+    printf("%d ", *watchV);
+  }
 }
 
 /*
@@ -34,11 +32,27 @@ have to memorize what value index you use for each symbol.
 variable for every character, have a couple dozen ifs, etc.
 */
 
-void textData(){
+void textData() {
+  printf("-----------Problem 2-----------\n");
+  int cap = 1001;
+  char text[cap];
+  char* curr = text;
+  printf("Type any sentence that comes to mind, just no more than 1000 characters please\n");
+  gets(text);
+  printf("Analysis \n");
+  for(int c = 0 ; c <= 127; c++) {
 
+    printf("%c :\n" , c);
+  // for(int i = 0; i < strlen(text); i++)
+  }
+    }
 }
-/* 
-3) When you’re done with all of the above, make a main in which you call each of the functions you
-wrote in the problems above. For printArray, give it an array containing the numbers 3, 5, 6, 2, just as an
-example.
-*/
+
+int main (){
+  int testArr[] = {3,5,6,2};
+  
+  
+  
+  
+return 0;
+}
