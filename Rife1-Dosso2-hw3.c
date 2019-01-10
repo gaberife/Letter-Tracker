@@ -1,6 +1,7 @@
 #include <stdio>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 
 
 void printArray(int arr[] , int length) {
@@ -12,47 +13,40 @@ void printArray(int arr[] , int length) {
   }
 }
 
-/*
-2) Write a function textData that asks the user to type a few sentences. It then counts how many of each
-letter (ignoring case) and punctuation occur in the sentences, and prints out this data.
-Notes:
- Treat upper- and lower-case letters as the same. So you’ll need to do some conversions. ASCII math
-is probably the simplest way. In C, recall that you can basically just treat a char like an int and it will
-use the ASCII value.
- You only have to count the following non-alphabetic characters:
-<space> . ! ? ‘ ,
-For any other characters encountered, just count it in an “all else” slot.
- Use an array to keep your counts. Again, use some ASCII math for the letters, and then a few special
-cases with a switch statement for the non-alphabetic characters.
- Use the #define preprocessor directive to define constants like SPACE that specify the index in the
-array for your <space> count. This will make your code much easier to read and debug – so you don’t
-have to memorize what value index you use for each symbol.
- Your code should be able to handle up to 1000 characters typed.
- As always, use good coding practices here. Don’t do any exhaustive thing like make a separate
-variable for every character, have a couple dozen ifs, etc.
-*/
-
 void textData() {
   printf("-----------Problem 2-----------\n");
-  int cap = 1001;
-  char text[cap];
-  char* curr = text;
+  
+ Initilizes: 
+  
+  int numChar; // tracks Number of Characters in sentence
+  int text[numChar] = {} // array for the sentnce 
+  int c, count[26] = {0};
+  
+// Part 1: Calls user to unput a sentence under 1000 characters 
+  
   printf("Type any sentence that comes to mind, just no more than 1000 characters please\n");
   gets(text);
-  printf("Analysis \n");
-  for(int c = 0 ; c <= 127; c++) {
-
-    printf("%c :\n" , c);
-  // for(int i = 0; i < strlen(text); i++)
+  for(i = 0; text[i] != '\0'; ++i);{
+    numChar++;
   }
-    }
+  
+  
+//	Part 2: Code that Counts numbr of Characters in the sentence (Parts 1 and two should be simultanious)
+ 
+      
+//  Part 3: Code that runs through the Index of ASCII and compares it to the index of the user inputted sentence
+  char* curr = text;
+  printf("Analysis: ")
+  for (ASCII Aaary){
+  	for (Sentence Array[numChar){
+  		if(compares Each letter to the current ASCII count){
+      ASCII count++;
+       printf("%c :\n" , c);
+      }
+		}
+  )
 }
-
 int main (){
-  int testArr[] = {3,5,6,2};
-  
-  
-  
-  
+  int testArr[] = {3,5,6,2}; 
 return 0;
 }
