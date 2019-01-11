@@ -1,4 +1,4 @@
-#include <stdio>
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
@@ -46,6 +46,7 @@ void textData() {
 
 int main (){
 	testArr[] = {3,5,6,2}; 
+	printArray();
 	textData();
 	return 0;
 }
