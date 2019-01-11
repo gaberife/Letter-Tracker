@@ -15,38 +15,37 @@ void printArray(int arr[] , int length) {
 
 void textData() {
   printf("-----------Problem 2-----------\n");
-  
- Initilizes: 
-  
-  int numChar; // tracks Number of Characters in sentence
-  int text[numChar] = {} // array for the sentnce 
-  int c, count[26] = {0};
-  
-// Part 1: Calls user to unput a sentence under 1000 characters 
-  
+  char text[1001];//establishes array for the input 
+  int c = 0, f = 0, count[123] = {0}, x;
+  char spec[6] = {' ','.',',','!','?','\''};
+
   printf("Type any sentence that comes to mind, just no more than 1000 characters please\n");
+  printf("\n");
   gets(text);
-  for(i = 0; text[i] != '\0'; ++i);{
-    numChar++;
+//Conversion -- Done
+  while(text[c]) {
+    text[c] = tolower(text[c]);
+    c++;
+    }
+  printf("\n");
+//Counting -- Done 
+  while (text[f] != '\0') {
+    if (text[f] <= 'z') {
+    x = text[f];
+    count[x]++;
   }
-  
-  
-//	Part 2: Code that Counts numbr of Characters in the sentence (Parts 1 and two should be simultanious)
- 
-      
-//  Part 3: Code that runs through the Index of ASCII and compares it to the index of the user inputted sentence
-  char* curr = text;
-  printf("Analysis: ")
-  for (ASCII Aaary){
-  	for (Sentence Array[numChar){
-  		if(compares Each letter to the current ASCII count){
-      ASCII count++;
-       printf("%c :\n" , c);
-      }
-		}
-  )
+  f++;
 }
+  for (int i = 97; i < 123; i++){
+    printf("%c : %d\n", i, count[i]);
+  }
+  for (int i = 0; i < 6; i++){
+    printf("%c : %d\n", spec[i], count[spec[i]]);
+  }
+}
+
 int main (){
-  int testArr[] = {3,5,6,2}; 
-return 0;
+	testArr[] = {3,5,6,2}; 
+	textData();
+	return 0;
 }
